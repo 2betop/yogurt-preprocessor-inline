@@ -1,6 +1,6 @@
 {
-  "name": "fis-preprocessor-inline",
-  "version": "0.0.2",
+  "name": "yogurt-preprocessor-inline",
+  "version": "0.0.1",
   "description": "inline",
   "main": "index.js",
   "directories": {
@@ -11,13 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiangshouding/fis-preprocessor-inline.git"
+    "url": "https://github.com/2betop/fis-preprocessor-inline.git"
   },
   "keywords": [
     "fis",
     "inline"
   ],
-  "author": "xiangshouding <xiangshouding@baidu.com>",
+  "author": [
+    "xiangshouding <xiangshouding@baidu.com>",
+    "2betop <2betop.cn@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xiangshouding/fis-preprocessor-inline/issues"

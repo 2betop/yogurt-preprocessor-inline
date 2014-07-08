@@ -21,9 +21,9 @@ function doInline(content, file, ext, type) {
         return content;
     }
     if (type === 'css') {
-        content = ld + 'style id="' + inline +'"' + rd + fis.compile.extCss('@import url("' + inline + '?__inline")') + ld + '/style' + rd + content;
+        content = ld + ' style id="' + inline +'"' + rd + fis.compile.extCss('@import url("' + inline + '?__inline")') + ld + 'endstyle ' + rd + content;
     } else if (type === 'js') {
-        content = ld + 'script id="' + inline +'"' + rd + fis.compile.extJs('__inline("' + inline + '")') + ld + '/script' + rd + content;
+        content = ld + ' script id="' + inline +'"' + rd + fis.compile.extJs('__inline("' + inline + '")') + ld + 'enscript ' + rd + content;
     }
     return content;
 }
@@ -33,8 +33,8 @@ module.exports = function(content, file, conf) {
         return content;
     }
 
-    ld = conf.left_delimiter || fis.config.get('settings.smarty.left_delimiter') || '{%';
-    rd = conf.right_delimiter || fis.config.get('settings.smarty.right_delimiter') || '%}';
+    ld = conf.left_delimiter || fis.config.get('settings.swig.left_delimiter') || '{%';
+    rd = conf.right_delimiter || fis.config.get('settings.swig.right_delimiter') || '%}';
     var exts = fis.config.get('roadmap.ext') || {};
 
     exts = fis.util.merge(exts, {
