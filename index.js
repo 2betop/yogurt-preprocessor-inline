@@ -21,9 +21,9 @@ function doInline(content, file, ext, type) {
         return content;
     }
     if (type === 'css') {
-        content = ld + ' style id="' + inline +'"' + rd + fis.compile.extCss('@import url("' + inline + '?__inline")') + ld + 'endstyle ' + rd + content;
+        content = ld + ' style id="' + inline +'" ' + rd + fis.compile.extCss('@import url("' + inline + '?__inline")') + ld + 'endstyle ' + rd + content;
     } else if (type === 'js') {
-        content = ld + ' script id="' + inline +'"' + rd + fis.compile.extJs('__inline("' + inline + '")') + ld + 'enscript ' + rd + content;
+        content = ld + ' script id="' + inline +'" ' + rd + fis.compile.extJs('__inline("' + inline + '")') + ld + ' enscript ' + rd + content;
     }
     return content;
 }
