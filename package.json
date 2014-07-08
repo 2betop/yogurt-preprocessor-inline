@@ -1,6 +1,6 @@
 {
   "name": "yogurt-preprocessor-inline",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "inline",
   "main": "index.js",
   "directories": {
